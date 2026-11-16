@@ -2,6 +2,8 @@
 
 Trabalho final de Fundamentos de Sistemas de Informação (Estudo de caso 01).
 
+**Equipe de consultoria:** Oliver Henrique, Lucas Vasconcelos, Marcos de Oliveira, Rayna Livia, Caio Vilanova e Talita Nasser.
+
 Apresentação executiva interativa em 3D (Three.js) com os 8 desafios da equipe de consultoria:
 diagnóstico, priorização, soluções, pesquisa de mercado, orçamento, implantação, benefícios e riscos e defesa diante da diretoria.
 

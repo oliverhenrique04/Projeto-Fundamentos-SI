@@ -21,6 +21,7 @@ const S_COVER = {
     <h1>Distribuidora <span class="hl">Horizonte</span></h1>
     <p class="lead">Diagnóstico, prioridades e plano de TI para a empresa crescer 20% sem atrasos, retrabalho ou perda de dados.</p>
     ${stats([['8', 'problemas mapeados no prédio'], [BRLk(totals.o12), 'Ondas 1+2 · teto de R$ 45 mil'], ['24 semanas', 'sem parar a operação']])}
+    <p class="small">Equipe de consultoria: Oliver Henrique, Lucas Vasconcelos, Marcos de Oliveira, Rayna Livia, Caio Vilanova e Talita Nasser</p>
     <div class="row" style="justify-content:center"><button class="btn primary" data-go="1">Começar a apresentação →</button></div>`,
   update(t) { building.root.rotation.y = Math.sin(t * .12) * .35; },
   exit() { building.root.rotation.y = 0; },
