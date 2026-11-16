@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Distribuidora Horizonte — Proposta de Consultoria em TI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/*__CSS__*/
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.min.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="stage"></div>
+<div id="labels"></div>
+<div id="fade"></div>
+
+<header id="top">
+  <div class="brand" data-go="0" title="Voltar à capa">
+    <svg viewBox="0 0 40 24" width="34" height="20" aria-hidden="true"><path d="M2 20h36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><path d="M8 20a12 12 0 0 1 24 0" fill="none" stroke="#FF8A3D" stroke-width="3"/><circle cx="20" cy="20" r="4.5" fill="#FF8A3D"/></svg>
+    <span><b>Horizonte</b> · Consultoria TI</span>
+  </div>
+  <div id="chapter"></div>
+  <div class="tools">
+    <button id="btnTimer" class="pill" title="Cronômetro da apresentação (T)"><span id="clock">00:00</span><span class="muted"> / 15:00</span></button>
+    <button id="btnNotes" class="pill" title="Notas do apresentador (N)">Notas</button>
+    <button id="btnSources" class="pill" title="Fontes de preço">Fontes</button>
+    <button id="btnFull" class="pill icon" title="Tela cheia (F)">⤢</button>
+  </div>
+</header>
+
+<aside id="panel" aria-live="polite">
+  <div id="panelInner"></div>
+</aside>
+
+<div id="tooltip" role="tooltip"></div>
+<div id="notes" hidden><div class="notes-h">Fala sugerida</div><div id="notesTxt"></div></div>
+
+<nav id="nav">
+  <button id="prev" class="navbtn" aria-label="Anterior">‹</button>
+  <div id="dots"></div>
+  <button id="next" class="navbtn" aria-label="Próximo">›</button>
+</nav>
+<div id="hint">← → navegar · arraste para girar · clique nos objetos</div>
+
+<div id="modal" hidden>
+  <div class="modal-card">
+    <button class="modal-x" aria-label="Fechar">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<div id="loading"><div class="ld-sun"></div><div>Montando o prédio da Horizonte…</div></div>
+
+<script>
+/*__DATA__*/
+</script>
+<script type="module">
+/*__APP__*/
+</script>
+</body>
+</html>
