@@ -252,8 +252,7 @@ const PRESENTERS = [
   { id:"marcos", name:"Marcos de Oliveira", part:"Impactos e priorização", slides:[3,4] },
   { id:"talita", name:"Talita Nasser", part:"Soluções de infraestrutura (prédio e rede)", slides:[5,6] },
   { id:"lucas", name:"Lucas Vasconcelos", part:"ERP e pesquisa de mercado", slides:[7,8] },
-  { id:"caio", name:"Caio Vilanova", part:"Orçamento e implantação", slides:[9,10] },
-  { id:"oliver", name:"Oliver Henrique", part:"Benefícios, riscos, defesa e fechamento", slides:[11,12,13] },
+  { id:"oliver", name:"Oliver Henrique", part:"Orçamento, implantação, benefícios e riscos, defesa e fechamento", slides:[9,10,11,12,13] },
 ];
 const presenterOf = i => PRESENTERS.find(p => p.slides.includes(i));
 const SCRIPT = [
@@ -266,8 +265,8 @@ const SCRIPT = [
   { slide:6, min:1, who:"Soluções", by:"talita", txt:"Topologia, redes separadas e failover." },
   { slide:7, min:1, who:"Soluções", by:"lucas", txt:"ERP: um pedido do início ao fim." },
   { slide:8, min:1, who:"Mercado", by:"lucas", txt:"Fornecedores, referências e comparativos compra × locação." },
-  { slide:9, min:1.5, who:"Orçamento", by:"caio", txt:"Ondas 1+2 dentro de R$ 45 mil; custos mensais separados." },
-  { slide:10, min:1, who:"Implantação", by:"caio", txt:"24 semanas sem parar a empresa." },
+  { slide:9, min:1.5, who:"Orçamento", by:"oliver", txt:"Ondas 1+2 dentro de R$ 45 mil; custos mensais separados." },
+  { slide:10, min:1, who:"Implantação", by:"oliver", txt:"24 semanas sem parar a empresa." },
   { slide:11, min:1, who:"Benefícios/riscos", by:"oliver", txt:"Indicadores e riscos mitigados." },
   { slide:12, min:1, who:"Defesa", by:"oliver", txt:"Resposta direta a cada diretor." },
   { slide:13, min:0.5, who:"Fechamento", by:"oliver", txt:"Pedido de aprovação da Onda 1 e abertura para perguntas." },
@@ -277,6 +276,5 @@ const HANDOFF = {
   2: "Passo a palavra para o Marcos, que vai mostrar como esses problemas se conectam e o que atacar primeiro.",
   4: "Agora a Talita mostra como fica o prédio depois das soluções.",
   6: "O Lucas continua com a parte de sistemas: o ERP e a pesquisa de preços.",
-  8: "Com os preços em mãos, o Caio apresenta o orçamento e o cronograma.",
-  10: "Para fechar, o Oliver apresenta os resultados esperados, os riscos e a nossa resposta à diretoria.",
+  8: "Com os preços em mãos, o Oliver apresenta o orçamento, o cronograma e o fechamento.",
 };

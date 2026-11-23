@@ -25,7 +25,7 @@ const S_COVER = {
     <div class="row" style="justify-content:center"><button class="btn primary" data-go="1">Começar a apresentação →</button></div>`,
   update(t) { building.root.rotation.y = Math.sin(t * .12) * .35; },
   exit() { building.root.rotation.y = 0; },
-  notes: 'Bom dia, diretoria. Eu sou a Rayna e esta é a nossa equipe: Marcos, Talita, Lucas, Caio e Oliver. Em 15 minutos vamos mostrar o que está travando a Horizonte, o que resolver primeiro e quanto custa. Tudo dentro do teto de R$ 45 mil para as duas primeiras ondas.'
+  notes: 'Bom dia, diretoria. Eu sou a Rayna e comigo apresentam Marcos, Talita, Lucas e Oliver. Em 15 minutos vamos mostrar o que está travando a Horizonte, o que resolver primeiro e quanto custa. Tudo dentro do teto de R$ 45 mil para as duas primeiras ondas.'
 };
 
 /* ---------- 1. AGENDA ---------- */
