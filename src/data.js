@@ -246,20 +246,37 @@ const QA = [
   { q:"Como saberemos que deu certo?", a:"Linha de base medida na semana 1 e 8 indicadores revisados na semana 24: vendas sem estoque, duplicidade, indisponibilidade, cobertura Wi-Fi, restauração de arquivos, fila da expedição, segurança e failover." },
 ];
 
-/* Roteiro da apresentação (12–15 min) */
-const SCRIPT = [
-  { slide:0, min:0.5, who:"Abertura", txt:"Quem somos e a promessa: resolver primeiro o que trava a operação." },
-  { slide:1, min:0.5, who:"Agenda", txt:"Os 8 desafios em 15 minutos." },
-  { slide:2, min:2, who:"Diagnóstico", txt:"Tour pelo prédio: um problema por setor, com o fato do caso." },
-  { slide:3, min:1, who:"Diagnóstico", txt:"Como os problemas viram atrasos, retrabalho e reclamações." },
-  { slide:4, min:1.5, who:"Priorização", txt:"Urgência × impacto e dependências: por que rede e backup vêm primeiro." },
-  { slide:5, min:1.5, who:"Soluções", txt:"Antes e depois no prédio." },
-  { slide:6, min:1, who:"Soluções", txt:"Topologia, redes separadas e failover." },
-  { slide:7, min:1, who:"Soluções", txt:"ERP: um pedido do início ao fim." },
-  { slide:8, min:1, who:"Mercado", txt:"Fornecedores, referências e comparativos compra × locação." },
-  { slide:9, min:1.5, who:"Orçamento", txt:"Ondas 1+2 dentro de R$ 45 mil; custos mensais separados." },
-  { slide:10, min:1, who:"Implantação", txt:"24 semanas sem parar a empresa." },
-  { slide:11, min:1, who:"Benefícios/riscos", txt:"Indicadores e riscos mitigados." },
-  { slide:12, min:1, who:"Defesa", txt:"Resposta direta a cada diretor." },
-  { slide:13, min:0.5, who:"Fechamento", txt:"Pedido de aprovação da Onda 1." },
+/* Roteiro da apresentação (15 min) — ordem combinada pelo grupo */
+const PRESENTERS = [
+  { id:"rayna", name:"Rayna Livia", part:"Abertura e diagnóstico no prédio", slides:[0,1,2] },
+  { id:"marcos", name:"Marcos de Oliveira", part:"Impactos e priorização", slides:[3,4] },
+  { id:"talita", name:"Talita Nasser", part:"Soluções de infraestrutura (prédio e rede)", slides:[5,6] },
+  { id:"lucas", name:"Lucas Vasconcelos", part:"ERP e pesquisa de mercado", slides:[7,8] },
+  { id:"caio", name:"Caio Vilanova", part:"Orçamento e implantação", slides:[9,10] },
+  { id:"oliver", name:"Oliver Henrique", part:"Benefícios, riscos, defesa e fechamento", slides:[11,12,13] },
 ];
+const presenterOf = i => PRESENTERS.find(p => p.slides.includes(i));
+const SCRIPT = [
+  { slide:0, min:0.5, who:"Abertura", by:"rayna", txt:"Apresenta a equipe e a promessa: resolver primeiro o que trava a operação." },
+  { slide:1, min:0.5, who:"Agenda", by:"rayna", txt:"Os 8 desafios em 15 minutos." },
+  { slide:2, min:2, who:"Diagnóstico", by:"rayna", txt:"Tour pelo prédio: um problema por setor, com o fato do caso." },
+  { slide:3, min:1, who:"Diagnóstico", by:"marcos", txt:"Como os problemas viram atrasos, retrabalho e reclamações." },
+  { slide:4, min:1.5, who:"Priorização", by:"marcos", txt:"Urgência × impacto e dependências: por que rede e backup vêm primeiro." },
+  { slide:5, min:1.5, who:"Soluções", by:"talita", txt:"Antes e depois no prédio." },
+  { slide:6, min:1, who:"Soluções", by:"talita", txt:"Topologia, redes separadas e failover." },
+  { slide:7, min:1, who:"Soluções", by:"lucas", txt:"ERP: um pedido do início ao fim." },
+  { slide:8, min:1, who:"Mercado", by:"lucas", txt:"Fornecedores, referências e comparativos compra × locação." },
+  { slide:9, min:1.5, who:"Orçamento", by:"caio", txt:"Ondas 1+2 dentro de R$ 45 mil; custos mensais separados." },
+  { slide:10, min:1, who:"Implantação", by:"caio", txt:"24 semanas sem parar a empresa." },
+  { slide:11, min:1, who:"Benefícios/riscos", by:"oliver", txt:"Indicadores e riscos mitigados." },
+  { slide:12, min:1, who:"Defesa", by:"oliver", txt:"Resposta direta a cada diretor." },
+  { slide:13, min:0.5, who:"Fechamento", by:"oliver", txt:"Pedido de aprovação da Onda 1 e abertura para perguntas." },
+];
+/* Frase de passagem ao fim de cada bloco */
+const HANDOFF = {
+  2: "Passo a palavra para o Marcos, que vai mostrar como esses problemas se conectam e o que atacar primeiro.",
+  4: "Agora a Talita mostra como fica o prédio depois das soluções.",
+  6: "O Lucas continua com a parte de sistemas: o ERP e a pesquisa de preços.",
+  8: "Com os preços em mãos, o Caio apresenta o orçamento e o cronograma.",
+  10: "Para fechar, o Oliver apresenta os resultados esperados, os riscos e a nossa resposta à diretoria.",
+};

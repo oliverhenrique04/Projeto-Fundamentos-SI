@@ -145,3 +145,6 @@ tr.tot td{font-weight:700;color:var(--orange);border-top:1px solid var(--orange)
 .lbl.val .rk{display:inline-block;font-size:10.5px;background:#FF8A3D;color:#160A02;border-radius:6px;padding:1px 5px;margin-right:5px;vertical-align:2px}
 .lbl.barname{transform:translate(-50%,0);background:none;border:0;font:500 11px/1.25 Inter;color:#D6DEF2;text-align:center;white-space:normal;width:104px;text-shadow:0 1px 4px #000}
 .lbl.barname .muted{font-size:10px}
+
+#chapter .presenter{color:#2EC4B6;letter-spacing:1px}
+.notes-who{font:600 12.5px Inter;color:#2A1A0A;background:#FFE2C8;border-radius:8px;padding:4px 8px;margin-bottom:8px;display:inline-block}

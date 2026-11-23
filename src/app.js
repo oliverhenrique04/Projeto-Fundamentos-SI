@@ -35,9 +35,10 @@ function go_(i) {
     renderPanel(s); panelInner.scrollTop = 0; panelInner.classList.remove('out');
   }, cur === i && prev ? 220 : 0);
   if (!prev) { panel.classList.toggle('cover', !!s.cover); panelSide = !s.cover; applyViewOffset(); }
-  $('#chapter').innerHTML = s.chapter;
+  const pr = presenterOf(i); $('#chapter').innerHTML = s.chapter + (pr ? ` <span class="presenter">· ${pr.name.split(' ')[0]}</span>` : '');
   $$('.dot', dotsEl).forEach((d, k) => d.classList.toggle('on', k === i));
-  $('#notesTxt').textContent = s.notes || '';
+  { const k = pr ? pr.slides.indexOf(i) + 1 : 0, nx = pr && PRESENTERS[PRESENTERS.indexOf(pr) + 1];
+    $('#notesTxt').innerHTML = (pr ? `<div class="notes-who">${pr.name} · ${k} de ${pr.slides.length}${k === pr.slides.length && nx ? ` · depois: ${nx.name.split(' ')[0]}` : ''}</div>` : '') + `<div>${s.notes || ''}</div>` + (HANDOFF[i] ? `<div style="margin-top:8px"><b>Passagem:</b> ${HANDOFF[i]}</div>` : ''); }
   flyTo(s.cam, s.target, prev ? 1500 : 10);
   s.enter && s.enter.call(s);
   tooltip.classList.remove('on');

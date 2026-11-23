@@ -11,6 +11,19 @@ diagnóstico, priorização, soluções, pesquisa de mercado, orçamento, implan
 
 **Relatório de consultoria (Word):** [`relatorio/Relatorio_Consultoria_Distribuidora_Horizonte.docx`](relatorio/Relatorio_Consultoria_Distribuidora_Horizonte.docx)
 
+## Ordem de apresentação (15 min)
+
+| # | Integrante | Bloco | Min |
+|---|---|---|---|
+| 1 | Rayna Livia | Abertura, agenda e diagnóstico no prédio | 3 |
+| 2 | Marcos de Oliveira | Cadeia de impactos e priorização | 2,5 |
+| 3 | Talita Nasser | Soluções no prédio e rede lógica | 2,5 |
+| 4 | Lucas Vasconcelos | ERP e pesquisa de mercado | 2 |
+| 5 | Caio Vilanova | Orçamento e implantação | 2,5 |
+| 6 | Oliver Henrique | Benefícios e riscos, defesa e fechamento | 2,5 |
+
+As notas do apresentador (tecla N) mostram quem fala em cada tela e a frase de passagem para o próximo.
+
 ## Como usar a apresentação
 
 | Ação | Atalho |

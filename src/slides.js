@@ -25,7 +25,7 @@ const S_COVER = {
     <div class="row" style="justify-content:center"><button class="btn primary" data-go="1">Começar a apresentação →</button></div>`,
   update(t) { building.root.rotation.y = Math.sin(t * .12) * .35; },
   exit() { building.root.rotation.y = 0; },
-  notes: 'Bom dia, diretoria. Em 15 minutos vamos mostrar o que está travando a Horizonte, o que resolver primeiro e quanto custa. Tudo dentro do teto de R$ 45 mil para as duas primeiras ondas.'
+  notes: 'Bom dia, diretoria. Eu sou a Rayna e esta é a nossa equipe: Marcos, Talita, Lucas, Caio e Oliver. Em 15 minutos vamos mostrar o que está travando a Horizonte, o que resolver primeiro e quanto custa. Tudo dentro do teto de R$ 45 mil para as duas primeiras ondas.'
 };
 
 /* ---------- 1. AGENDA ---------- */
@@ -705,10 +705,10 @@ const S_DEF = {
     $('#perDetail').innerHTML = `<div class="detail"><div class="kicker" style="color:${p.color}">${p.name} · ${p.role}</div><p style="font-style:italic">“${p.quote}”</p><dl><dt>Resposta</dt><dd>${p.answer}</dd><dt>Compromisso</dt><dd class="hl">${p.metric}</dd></dl></div>`;
   },
   html: () => `<div class="kicker">Desafio 8 · Apresentação executiva</div><h2>Uma resposta para cada diretor</h2>
-    <div class="tabs"><button class="on" data-t="dir">Diretoria</button><button data-t="rot">Roteiro 15 min</button><button data-t="qa">Perguntas difíceis</button></div>
+    <div class="tabs"><button class="on" data-t="dir">Diretoria</button><button data-t="rot">Roteiro e equipe</button><button data-t="qa">Perguntas difíceis</button></div>
     <div data-p="dir"><div class="cards">${PERSONAS.map(p => `<button class="card" data-per="${p.id}"><div class="t" style="color:${p.color}">${p.name}</div><div class="s">${p.role}</div></button>`).join('')}</div><div id="perDetail"><p class="small">Clique em um diretor, no painel ou na cena 3D.</p></div></div>
     <div data-p="rot" hidden><table><thead><tr><th>Bloco</th><th>Mensagem</th><th class="n">min</th></tr></thead><tbody>
-      ${SCRIPT.map(s => `<tr data-goto="${s.slide}" style="cursor:pointer"><td>${s.who}</td><td>${s.txt}</td><td class="n">${s.min}</td></tr>`).join('')}
+      ${PRESENTERS.map((pr, k) => { const its = SCRIPT.filter(x => x.by === pr.id); return `<tr class="sub"><td colspan="2">${k + 1}. ${pr.name} <span class="muted">· ${pr.part}</span></td><td class="n">${String(sum(its, x => x.min)).replace('.', ',')}</td></tr>` + its.map(s => `<tr data-goto="${s.slide}" style="cursor:pointer"><td>${s.who}</td><td>${s.txt}</td><td class="n">${String(s.min).replace('.', ',')}</td></tr>`).join(''); }).join('')}
       <tr class="tot"><td colspan="2">Total (+ perguntas)</td><td class="n">${sum(SCRIPT, s => s.min)}</td></tr></tbody></table>
       <p class="small" style="margin-top:6px">Clique numa linha para ir ao slide. O cronômetro no topo marca o tempo (atalho T).</p></div>
     <div data-p="qa" hidden>${QA.map(q => `<details class="acc"><summary>${q.q}</summary><div>${q.a}</div></details>`).join('')}</div>`,
